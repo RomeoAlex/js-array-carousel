@@ -30,11 +30,14 @@
     height:100%;
     width:100%;
     object-fit: cover;
-    display: none;
     position: relative;
     color: white;
+    display: none;
 }
-.single-img.active{
+.disappear{
+    display: none;
+}
+.active{
     display: block;
 }
 .single-img img{
@@ -83,10 +86,13 @@
 }
 .single-side-img img{
     height:100%;
-    width:100%;
+    width:100%;  
+}
+.grey-yes{
     filter: grayscale(1);
 }
+
 /* da rivedere */
-.single-side-img.active img{
+.grey-no{
     filter: grayscale(0);
 }
