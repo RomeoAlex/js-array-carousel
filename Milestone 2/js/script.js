@@ -25,7 +25,7 @@ const text = [
 
 // popolo il primo contenitore
 const imgContainer = document.querySelector('.big-image');
-     console.log(imgContainer);
+const imgSide = document.querySelector('.side-img');   
 
 for(let i = 0; i < items.length; i++){
     
@@ -33,10 +33,10 @@ for(let i = 0; i < items.length; i++){
     const thisTitle = title[i];
     const thisDescription = text[i];
     const boxImg = document.createElement('div');
-    boxImg.classList.add('single-img');
+    boxImg.classList.add('single-img','disappear');
     boxImg.innerHTML = `<img src="${items[i]}" alt="">` ;
     const boxText = document.createElement('div');
-    boxText.classList.add('.single-title');
+    boxText.classList.add('single-title');
     const boxText1 = document.createElement('h2');
     boxText1.innerHTML = title[i] ;
     const boxText2 = document.createElement('p');
@@ -44,11 +44,28 @@ for(let i = 0; i < items.length; i++){
     boxText.append(boxText1,boxText2);
     boxImg.appendChild(boxText);
     console.log(boxImg);
+    
+    const boxSide = document.createElement('div');
+    boxSide.classList.add('single-side-img','grey-yes');
+    boxSide.innerHTML = `<img src="${items[i]}" alt="">` ;
+    console.log(boxSide);
     imgContainer.append(boxImg);
+    imgSide.append(boxSide);  
 }
+const boxImg1 = document.querySelector('.single-img')
+    boxImg1.classList.remove('disappear');
+    boxImg1.classList.add('active');
+const boxSide1 = document.querySelector('.single-side-img')
+boxSide1.classList.remove('grey-yes');
+boxSide1.classList.add('grey-no');
+// const arrowUp  = document.querySelector('.top');
+// arrowUp.addEventListener('click' , function(){
 
-
-
+// }
+// let activeSelector = document.querySelector('.big-image').firstChild.innerHTML;
+// console.log(activeSelector);
+// activeSelector.remove('disappear');
+// activeSelector.add('active');
 
 
 // for( i = 1; i<= 100; i++){
