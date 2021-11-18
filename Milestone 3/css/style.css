@@ -56,6 +56,6 @@
     filter: grayscale(1);
 }
 /* da rivedere */
-.single-side-img .view{
+.single-side-img.active img{
     filter: grayscale(0);
 }
