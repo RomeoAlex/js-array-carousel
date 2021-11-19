@@ -1,4 +1,4 @@
-// ______________________________MILESTONE 2
+// ______________________________MILESTONE 3
 const items = [
     'img/01.jpg',
     'img/02.jpg',
@@ -43,25 +43,27 @@ for(let i = 0; i < items.length; i++){
     boxText2.innerHTML = text[i] ;
     boxText.append(boxText1,boxText2);
     boxImg.appendChild(boxText);
-    console.log(boxImg);
+    // console.log(boxImg);
     
     const boxSide = document.createElement('div');
     boxSide.classList.add('single-side-img','grey-yes');
     boxSide.innerHTML = `<img src="${items[i]}" alt="">` ;
-    console.log(boxSide);
+    // console.log(boxSide);
     imgContainer.append(boxImg);
     imgSide.append(boxSide);  
 }
-const boxImg1 = document.querySelector('.single-img')
-    boxImg1.classList.remove('disappear');
-    boxImg1.classList.add('active');
+const boxImg = document.querySelector('.single-img')
+console.log(boxImg);
+    boxImg[2].classList.remove('disappear');
+    boxImg[2].classList.add('active');
 const boxSide1 = document.querySelector('.single-side-img')
 boxSide1.classList.remove('grey-yes');
 boxSide1.classList.add('grey-no');
-// const arrowUp  = document.querySelector('.top');
-// arrowUp.addEventListener('click' , function(){
 
-// }
+const arrowUp  = document.querySelector('.top');
+arrowUp.addEventListener('click' , function(){
+
+});
 // let activeSelector = document.querySelector('.big-image').firstChild.innerHTML;
 // console.log(activeSelector);
 // activeSelector.remove('disappear');
